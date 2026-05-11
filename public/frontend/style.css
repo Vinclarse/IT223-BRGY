@@ -1,0 +1,400 @@
+/* General body background */
+body {
+    background: linear-gradient(135deg, #f8fbff 0%, #e3f0ff 100%);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+/* Navbar styling */
+.navbar {
+    background: #0b3d91; /* Slight transparency */
+    transition: background 0.3s ease;
+}
+.navbar:hover {
+    background: #0b3d91; /* Fully opaque on hover */
+}
+.navbar-brand {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #4a90e2 0%, #e3f0ff 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(74, 144, 226, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+    color: #0b3d91;
+}
+header.container.mb-4 {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+header img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+header .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+header .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}       
+header .display-5, .lead, h1, h2, h3, .alert{
+    animation: fadeInDown 1s ease-in-out;
+}
+.btn-outline-navy {
+    color: #0b3d91;
+    border-color: #0b3d91;
+}
+.btn-outline-navy:hover {
+    color: #ffffff;
+    background-color: #0b3d91;
+}
+.text-navy {
+    color: #0b3d91;
+}
+.about-hero {
+    background-color: #ffffff;
+    color: #0b3d91;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(74,144,226,0.08);
+    animation: fadeInDown 1s ease;
+}
+.lead {
+    color: #333;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.about-hero img {
+    border: 4px solid #fff;
+    border-radius: 1rem;
+    background: #fff;
+    animation: popIn 1s 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) backwards;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+p {
+    animation: fadeInDown 1s ease;
+}
+.about-section-title {
+    border-left: 5px solid #4a90e2;
+    padding-left: 0.75rem;
+    font-weight: 600;
+    color: #0b3d91;
+    margin-bottom: 1rem;
+    animation: slideInLeft 0.8s 0.2s both;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.about-values .bi {
+    font-size: 2rem;
+    color: #0b3d91;
+    animation: fadeIn 1s 0.7s both;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.about-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInUp 1s 0.4s both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(74,144,226,0.12);
+}
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0b3d91;
+}
+.card-title i {
+    animation: pulse 1.5s infinite alternate;
+}
+.card img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+@keyframes pulse {
+    from { color: #0b3d91; }
+    to { color: #0056b3; }
+}
+.link-primary {
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.link-primary::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0b3d91;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+.link-primary:hover {
+    color: #0b3d91;
+}
+.link-primary:hover::after {
+    width: 100%;
+}
+.link-primary::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #0b3d91;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+.link-primary:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+footer {
+    background: linear-gradient(90deg, #0b3d91, rgba(11, 78, 154, 0.9));
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(80, 120, 200, 0.08);
+    transition: background 0.3s ease;
+}
+footer:hover {
+    background: linear-gradient(90deg, #0b3d91, );
+}
+/* Add transparency to the navbar */
+.navbar {
+    background: #0b3d91; /* Slight transparency */
+    transition: background 0.3s ease;
+}
+.navbar:hover {
+    background: #0b3d91; /* Fully opaque on hover */
+}
+
+/* Add hover animation for buttons */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #0b3d91;
+    color: white;
+}
+.btn-danger {
+    color: #dc3545;
+    border: none;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    color: white;
+}
+.btn-outline-danger:hover{
+    color: white;
+    background-color: #dc3545;
+}
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+    header .display-5 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    header p.lead {
+        text-align: center;
+    }
+    header img {
+        margin: 0 auto;
+    }
+}
+
+/* Responsive card adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 1rem;
+    }
+}
+.feature-icon {
+    font-size: 3rem;
+    color: #0b3d91;
+    margin-bottom: 1rem;
+}
+.process-step {
+    background: #f8f9fa;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    /* keep relative positioning so absolute dropdowns align correctly */
+    position: relative;
+}
+
+/* Let Bootstrap control visibility; only provide theme and layering here */
+.dropdown-menu {
+    background-color: #dddddf;
+    min-width: 150px;
+    border-radius: 10px;
+    z-index: 2000; /* ensure it overlays page content */
+    position: absolute; /* force absolute positioning so it doesn't affect layout */
+    top: 100%;
+    left: 0;
+    margin-top: 0; /* avoid extra spacing that could push layout */
+}
+.dropdown-menu a {
+    padding: 10px 12px;
+    display: block;
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255,255,255,0.06);
+}
+
+/* Ensure Bootstrap's `.show` class displays the menu when JS toggles it */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Navbar-specific dropdown alignment: keep menu visually under the toggle and prevent overflow from pushing page */
+.navbar .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Section titles */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0b3d91;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0b3d91;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0b3d91;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+}
+h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0b3d91;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Simple responsive CSS calendar */
+.css-calendar .cal-header { border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: .75rem; }
+.css-calendar .cal-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: .4rem; }
+.css-calendar .cal-weekday { text-align:center; font-weight:600; color: #374151; padding: .5rem 0; }
+.css-calendar .cal-day { min-height: 90px; border: 1px solid rgba(0,0,0,0.04); padding: .5rem; background:#fff; border-radius:6px; }
+.css-calendar .cal-day .date { font-weight:700; color:#0B3D91; }
+.css-calendar .event-badge { display:block; margin-top:.35rem; padding:.15rem .35rem; background:#00B8A9; color:#fff; border-radius:4px; text-decoration:none; font-size:0.82rem; }
+.css-calendar .cal-day.empty { background:transparent; border: none; }
+@media (min-width: 768px) {
+    .css-calendar .cal-month { display:block; }
+     .css-calendar .cal-grid .cal-day { min-height:120px; }
+}
+
+/* Programs carousel sizing and rounded corners */
+.carousel.slide .carousel-inner { border-radius: 10px; overflow: hidden; }
+.carousel .carousel-item .card { border-radius: 10px; overflow: hidden; }
+.carousel .card-img-top { width: 100%; height: 420px; object-fit: cover; display: block; }
+.carousel .carousel-caption { bottom: 1rem; }
+.card .carousel { border-radius: 5px; }
